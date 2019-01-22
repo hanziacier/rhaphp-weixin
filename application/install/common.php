@@ -134,7 +134,7 @@ function write_config($config)
             $conf = str_replace("[{$name}]", $value, $conf);
         }
 
-        file_put_contents(APP_PATH . '/install.lock', 'ok');
+        file_put_contents(APP_PATH . 'install.lock', 'ok');
 
         //写入应用配置文件
         if (file_put_contents(APP_PATH . '../config/database.php', $conf)) {
